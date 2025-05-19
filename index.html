@@ -5,61 +5,140 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>AIverra – Autonomous ITSM</title>
   <style>
-    body { margin: 0; font-family: 'Segoe UI', sans-serif; background-color: #f5f5f5; color: #333; }
-    header { background: linear-gradient(135deg, #0f2027, #203a43, #2c5364); color: white; text-align: center; padding: 80px 20px; }
-    header h1 { font-size: 2.8em; margin: 0; }
-    header p { font-size: 1.2em; margin: 20px 0; }
-    form { margin-top: 30px; }
-    input[type="text"], input[type="email"] {
-      padding: 10px; font-size: 1em; width: 220px; margin: 5px; border: 1px solid #ccc; border-radius: 4px;
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f5f5f5;
+      color: #333;
     }
-    input[type="submit"] {
-      background-color: #00b894; color: white; padding: 10px 20px; border: none; border-radius: 4px; cursor: pointer;
+    header {
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      color: white;
+      text-align: center;
+      padding: 80px 20px;
     }
-    .section { padding: 60px 20px; max-width: 1100px; margin: 0 auto; }
-    .features { display: flex; gap: 30px; flex-wrap: wrap; }
+    header h1 {
+      font-size: 2.8em;
+      margin: 0;
+    }
+    header p {
+      font-size: 1.2em;
+      margin: 20px 0;
+    }
+    .logo-container {
+      width: 300px;
+      height: 100px;
+      overflow: hidden;
+      margin: 0 auto 30px auto;
+    }
+    .logo-container img {
+      width: 100%;
+      transform: translateY(-20px);
+    }
+    .section {
+      padding: 60px 20px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    .section h2 {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    .features {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 30px;
+    }
     .feature {
-      flex: 1 1 30%; background-color: white; padding: 30px; border-radius: 8px;
+      flex: 1 1 30%;
+      background-color: white;
+      padding: 30px;
+      border-radius: 8px;
       box-shadow: 0 2px 8px rgba(0,0,0,0.05);
     }
-    .cta-full { background-color: #2c5364; color: white; text-align: center; padding: 50px 20px; }
-    footer { background-color: #1e272e; color: #ccc; text-align: center; padding: 20px; }
+    .cta-full {
+      background-color: #2c5364;
+      color: white;
+      text-align: center;
+      padding: 50px 20px;
+    }
+    .cta-full a {
+      color: #00cec9;
+      font-weight: bold;
+      text-decoration: none;
+      font-size: 1.1em;
+    }
+    form {
+      margin-top: 30px;
+    }
+    input[type="text"],
+    input[type="email"] {
+      padding: 10px;
+      font-size: 1em;
+      width: 220px;
+      margin: 5px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    input[type="submit"] {
+      background-color: #00b894;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    footer {
+      background-color: #1e272e;
+      color: #ccc;
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9em;
+    }
   </style>
 </head>
 <body>
-  <header>
-    <img src="assets/AIverra_Logo_Transparent.png" alt="AIverra Logo" style="width: 300px; height: auto;">
-    <h1>ITSM, finally reimagined by AI.</h1>
-    <p>AIverra is a purpose-built platform with autonomous intelligence at its core — not added on as an afterthought.</p>
-    <form action="https://formspree.io/f/mgvkqody" method="POST">
-      <input type="text" name="name" placeholder="Enter your name" required />
-      <input type="email" name="email" placeholder="Enter your email" required />
-      <input type="submit" value="Join the Waitlist" />
-    </form>
-  </header>
-  <section class="section">
-    <h2>Why AIverra?</h2>
-    <div class="features">
-      <div class="feature">
-        <h3>Built for Autonomous Action</h3>
-        <p>AI agents resolve incidents, implement changes, and enforce governance — without waiting for human input.</p>
-      </div>
-      <div class="feature">
-        <h3>A Real Service-Centric Core</h3>
-        <p>Designed around a true service catalogue and federated CMDB, aligned to ISO/IEC 20000, 22301, 27001, and 31000.</p>
-      </div>
-      <div class="feature">
-        <h3>Enterprise-Ready from Day One</h3>
-        <p>Secure multi-tenant architecture, scalable for large organizations with global-level reporting.</p>
-      </div>
+
+<header>
+  <div class="logo-container">
+    <img src="assets/AIverra_Logo_Transparent_1500x1500.png" alt="AIverra Logo">
+  </div>
+  <h1>ITSM, finally reimagined by AI.</h1>
+  <p>AIverra is a purpose-built platform with autonomous intelligence at its core — not added on as an afterthought.</p>
+  <form action="https://formspree.io/f/mgvkqody" method="POST">
+    <input type="text" name="name" placeholder="Enter your name" required />
+    <input type="email" name="email" placeholder="Enter your email" required />
+    <input type="submit" value="Join the Waitlist" />
+  </form>
+</header>
+
+<section class="section">
+  <h2>Why AIverra?</h2>
+  <div class="features">
+    <div class="feature">
+      <h3>Built for Autonomous Action</h3>
+      <p>AI agents resolve incidents, implement changes, and enforce governance — without waiting for human input.</p>
     </div>
-  </section>
-  <section class="cta-full">
-    <p>Be among the first to shape the future of ITSM.</p>
-    <a href="#">Get Early Access</a>
-  </section>
-  <footer>
-    &copy; 2025 AIverra. All rights reserved. | <a href="#" style="color: #bbb;">Privacy</a>
-  </footer>
+    <div class="feature">
+      <h3>A Real Service-Centric Core</h3>
+      <p>Designed around a true service catalogue and federated CMDB, aligned to ISO/IEC 20000, 22301, 27001, and 31000.</p>
+    </div>
+    <div class="feature">
+      <h3>Enterprise-Ready from Day One</h3>
+      <p>Secure multi-tenant architecture, scalable for large organizations with global-level reporting.</p>
+    </div>
+  </div>
+</section>
+
+<section class="cta-full">
+  <p>Be among the first to shape the future of ITSM.</p>
+  <a href="#">Get Early Access</a>
+</section>
+
+<footer>
+  &copy; 2025 AIverra. All rights reserved. | <a href="#" style="color: #bbb;">Privacy</a>
+</footer>
+
 </body>
 </html>
