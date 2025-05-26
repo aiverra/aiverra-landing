@@ -1,11 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <script>
+    if (window.innerWidth < 768) {
+      window.location.href = "index-mobile.html";
+    }
+  </script>
   <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
   <link rel="manifest" href="assets/site.webmanifest">
-  <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
   <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
   <script defer data-domain="revitilize.com" src="https://plausible.io/js/script.js"></script>
   <meta charset="UTF-8" />
@@ -22,20 +26,20 @@
       background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
       color: white;
       text-align: center;
-      padding: 80px 20px;
+      padding: 60px 16px;
     }
     header h1 {
-      font-size: 2.8em;
+      font-size: 2em;
       margin: 0;
     }
     header p {
-      font-size: 1.2em;
+      font-size: 1em;
       margin: 20px 0;
     }
     .logo-container {
-      width: 300px;
+      width: 180px;
       height: auto;
-      margin: 0 auto 30px auto;
+      margin: 0 auto 20px auto;
     }
     .logo-container img {
       width: 100%;
@@ -44,32 +48,40 @@
       image-rendering: auto;
     }
     .section {
-      padding: 60px 20px;
-      max-width: 1100px;
+      padding: 40px 16px;
+      max-width: 100%;
       margin: 0 auto;
     }
     .section h2 {
       text-align: center;
-      margin-bottom: 40px;
+      font-size: 1.5em;
+      margin-bottom: 30px;
     }
     .features {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      gap: 30px;
-    }
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+}
     .feature {
-      flex: 1 1 30%;
-      background-color: white;
-      padding: 30px;
-      border-radius: 8px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-    }
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+  flex: 1 1 30%;
+  max-width: 30%;
+  box-sizing: border-box;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.feature:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
     .cta-full {
       background-color: #2c5364;
       color: white;
       text-align: center;
-      padding: 50px 20px;
+      padding: 40px 16px;
     }
     .cta-full a {
       color: #00cec9;
@@ -78,14 +90,16 @@
       font-size: 1.1em;
     }
     form {
-      margin-top: 30px;
+      margin-top: 20px;
     }
     input[type="text"],
     input[type="email"] {
       padding: 10px;
       font-size: 1em;
-      width: 220px;
-      margin: 5px;
+      width: 300px;
+      max-width: 90%;
+      margin: 5px auto;
+      display: block;
       border: 1px solid #ccc;
       border-radius: 4px;
     }
@@ -96,15 +110,27 @@
       border: none;
       border-radius: 4px;
       cursor: pointer;
+      width: 300px;
+      max-width: 90%;
+      margin: 10px auto;
+      display: block;
     }
     footer {
       background-color: #1e272e;
       color: #ccc;
       text-align: center;
       padding: 20px;
-      font-size: 0.9em;
+      font-size: 0.85em;
     }
-  </style>
+  @media (max-width: 767px) {
+  .features {
+    flex-direction: column;
+  }
+  .feature {
+    max-width: 100%;
+  }
+}
+</style>
 </head>
 <body>
 
